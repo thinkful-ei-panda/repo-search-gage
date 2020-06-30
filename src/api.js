@@ -1,16 +1,14 @@
-// import {apiCallBy} from './api.js';
-
 
 const apiCallBy =(q) =>{
-  const url='https://api.github.com';
-  
-  fetch(`${url}/users/${q}/repos`)
+  const url='https://api.github.com/';
+
+  fetch(`${url}/user/${q}/repos`)
     .then( (res) => {
       if(res.ok){
         return res.json(); 
       }else{
         let error;
-            
+          
         return error = res.status ;
       }
     })
@@ -24,16 +22,4 @@ const apiCallBy =(q) =>{
     });
 };
 
-const handleClick =() => {
-    console.log('ee')
-  $('#push').click(e=>{
-    e.preventDefault();
-    const q = $('#input').val();
-    apiCallBy(q);
-  });
-}; 
-
-const jquaryPackage = () =>{
-  handleClick();
-};
-$(jquaryPackage);
+export {apiCallBy} ;
