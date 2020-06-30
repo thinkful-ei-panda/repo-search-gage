@@ -1,5 +1,3 @@
-// import {apiCallBy} from './api.js';
-
 
 const apiCallBy =(q) =>{
   const url='https://api.github.com';
@@ -25,7 +23,6 @@ const apiCallBy =(q) =>{
 };
 
 const handleClick =() => {
-    console.log('ee')
   $('#push').click(e=>{
     e.preventDefault();
     const q = $('#input').val();
